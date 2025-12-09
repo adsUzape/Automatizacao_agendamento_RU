@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang=""><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/theme.css.xhtml?ln=primefaces-saga&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/main_.css.xhtml?ln=css" /><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/texteditor/texteditor.css.xhtml?ln=primefaces&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=11.0.0" /><link type="text/css" rel="stylesheet" href="/sifw/javax.faces.resource/schedule/schedule.css.xhtml?ln=primefaces&amp;v=11.0.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link href="https://www.iffarroupilha.edu.br/templates/layoutI-iff/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /></head><body>
+
+	<script>/*FIREFOX_FOUC_FIX*/</script><header>
+		<div class="bg-dark nav-width menu-lateral">
+			<div class="flex-center" style="display: flex;">
+				
+				<div class="logo-header header-item">
+					<a href="#"><img src="/sifw/resources/img/logo_iff.png" alt="logo" />
+					</a>
+				</div>
+				<div class="header-item">
+					<span><b>INSTITUTO FEDERAL</b> <br />Farroupilha
+					</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class="header-rigth min-main">
+<form id="frmHeader" name="frmHeader" method="post" action="/sifw/app/agendamento.xhtml" class="header-box" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="frmHeader" value="frmHeader" />
+
+				<div class="header-itens">
+					<div class="header-item">
+						<a onclick="showMenuNavEsquesdo();"><i class="pi pi-align-justify" style="font-size: 2rem"></i></a>
+					</div>
+				
+					<div class="header-item" style="display: none">
+						<label>Campus <br />Frederico Westphalen</label>
+					</div>
+				</div>
+				<div class="header-itens">
+							
+					<div class="header-item" style="display: none;"><div id="frmHeader:j_idt12" class="ui-overlay-badge"><span class="ui-badge ui-widget">5+</span>
+					        <i class="pi pi-envelope" style="font-size: 1.5rem"></i></div>
+					</div>
+					
+					<div class="header-item"><a href="/sifw/app/perfil.xhtml">Bruno Evaristo Pinheiro</a>
+					</div>
+					
+					<div class="header-item"><a id="frmHeader:dynaButton" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;frmHeader:dynaButton&quot;,f:&quot;frmHeader&quot;});return false;" type="button">
+								<span class="perfil"><img id="frmHeader:j_idt18" src="data:image/png;base64,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" alt="user" />
+								</span></a><div id="frmHeader:j_idt20" class="ui-menu ui-tieredmenu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" style="width:200px"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul role="menubar" class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/perfil.xhtml"><span class="ui-menuitem-text">Perfil</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="none"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="https://ru.fw.iffarroupilha.edu.br/auth/realms/iffar/account/password" target="_blanc"><span class="ui-menuitem-text">Senha</span></a></li></ul></div>
+					</div>
+					<div class="header-item"><a id="frmHeader:j_idt24" href="#" class="ui-commandlink ui-widget btn new-adversetiment btn-border btn-post nav-link" onclick="PrimeFaces.addSubmitParam('frmHeader',{'frmHeader:j_idt24':'frmHeader:j_idt24'}).submit('frmHeader');return false;" title="Sair">
+							<i class="pi pi-sign-out" style="font-size: 1.5rem"></i></a>
+					</div>	
+				</div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="6731932973012955931:-5328125881940894329" autocomplete="off" />
+</form>
+		
+		</div>
+	</header>
+	
+	<main class="">
+
+
+	<nav class="bg-dark nav-width menu-lateral" id="menuNavEsquerdo">
+<form id="j_idt30" name="j_idt30" method="post" action="/sifw/app/agendamento.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt30" value="j_idt30" />
+<div id="j_idt30:j_idt31" class="ui-panelmenu ui-widget links-menu" role="tablist"><div class="ui-panelmenu-panel"><h3 class="ui-widget ui-panelmenu-header ui-state-default ui-state-active ui-corner-top" role="tab" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><a href="#" tabindex="-1">RU</a></h3><div class="ui-panelmenu-content ui-widget-content" role="tabpanel" id="j_idt30:j_idt31_j_idt32" tabindex="0"><ul role="menu" class="ui-menu-list ui-helper-reset"><li role="none" class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/agendamento.xhtml"><span class="ui-menuitem-icon ui-icon pi pi-calendar" aria-hidden="true"></span><span class="ui-menuitem-text">Agendamento</span></a></li><li role="none" class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/cardapio.xhtml"><span class="ui-menuitem-icon ui-icon pi pi-book " aria-hidden="true"></span><span class="ui-menuitem-text">Cardápio</span></a></li><li role="none" class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/meu_saldo.xhtml"><span class="ui-menuitem-icon ui-icon pi pi-wallet" aria-hidden="true"></span><span class="ui-menuitem-text">Meu Saldo</span></a></li><li role="none" class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/transferencia.xhtml"><span class="ui-menuitem-icon ui-icon pi pi-reply" aria-hidden="true"></span><span class="ui-menuitem-text">Transf. de Creditos</span></a></li><li role="none" class="ui-menuitem ui-widget ui-corner-all"><a tabindex="-1" role="menuitem" class="ui-menuitem-link ui-corner-all" href="/sifw/app/transferir_agendamento.xhtml"><span class="ui-menuitem-icon ui-icon pi pi-reply" aria-hidden="true"></span><span class="ui-menuitem-text">Transf. de Agendamento</span></a></li></ul></div></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="6731932973012955931:-5328125881940894329" autocomplete="off" />
+</form>
+	</nav>
+		
+		<div class="main min-main">
+			<noscript>
+				<div class="ui-messages ui-widget">
+					<div class="ui-messages-warn ui-corner-all">
+						<span class="ui-messages-warn-icon"></span>
+						<ul>
+							<li role="alert" aria-atomic="true">
+								<span class="ui-messages-warn-summary"></span>
+								<span class="ui-messages-warn-detail">Habilite o suporte a javascript no seu navegador.</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</noscript>
+		
+<form id="frmMain" name="frmMain" method="post" action="/sifw/app/agendamento.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="frmMain" value="frmMain" />
+<span id="frmMain:j_idt41"></span>
+			
+			<nav class="ui-breadcrumb ui-module ui-widget ui-widget-header ui-helper-clearfix ui-corner-all" aria-label="Breadcrumb">
+				<ol class="ui-breadcrumb-items">
+					<li>
+						<a tabindex="0" class="ui-menuitem-link ui-corner-all ui-breadcrumb-home-icon ui-icon ui-icon-home" href="index.xhtml"></a>
+					</li>
+					<li>
+						<a tabindex="0" aria-current="page" class="ui-menuitem-link ui-corner-all" href="#">
+						<span class="ui-menuitem-text">Agendamento</span>
+						</a>
+					</li>
+				</ol>
+			</nav><div id="frmMain:j_idt43" class="ui-outputpanel ui-widget">
+				<div class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="frmMain:j_idt45" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_frmMain_j_idt45"><div id="frmMain:j_idt45_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Horários e refeições disponiveis para agendamento</span></div><div id="frmMain:j_idt45_content" class="ui-panel-content ui-widget-content"><div id="frmMain:j_idt46" class="ui-datatable ui-widget ui-datatable-sm"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="frmMain:j_idt46_head"><tr role="row"><th id="frmMain:j_idt46:j_idt47" class="ui-state-default" role="columnheader" aria-label="Refeição" scope="col" style="width:55%"><span class="ui-column-title">Refeição</span></th><th id="frmMain:j_idt46:j_idt49" class="ui-state-default ui-column-p-1" role="columnheader" aria-label="Ex. bloqueio base hoje*" scope="col" style="width:15%"><span class="ui-column-title">Ex. bloqueio base hoje*</span></th><th id="frmMain:j_idt46:j_idt51" class="ui-state-default ui-column-p-1" role="columnheader" aria-label="Hora limite*" scope="col" style="width:15%"><span class="ui-column-title">Hora limite*</span></th><th id="frmMain:j_idt46:j_idt53" class="ui-state-default ui-column-p-2" role="columnheader" aria-label="Hora de início(Util)" scope="col" style="width:15%"><span class="ui-column-title">Hora de início(Util)</span></th><th id="frmMain:j_idt46:j_idt55" class="ui-state-default ui-column-p-3" role="columnheader" aria-label="Hora de início(Find.)" scope="col" style="width:15%"><span class="ui-column-title">Hora de início(Find.)</span></th></tr></thead><tbody id="frmMain:j_idt46_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" class="">
+								Almoço, R$ 0.0, Integrado
+							</td><td role="gridcell" class="ui-column-p-1">
+								<abbr title="Eu devo agendar o/a Almoço para hoje, antes das 17:00 do dia 20/10.">
+									17:00 do dia 20/10
+								</abbr></td><td role="gridcell" class="ui-column-p-1">
+								18
+							</td><td role="gridcell" class="ui-column-p-2">
+								11:00
+							</td><td role="gridcell" class="ui-column-p-3">
+								11:00
+							</td></tr><tr data-ri="1" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" class="">
+								Café da manhã, R$ 0.0, Moradia Estudantil
+							</td><td role="gridcell" class="ui-column-p-1">
+								<abbr title="Eu devo agendar o/a Café da manhã para hoje, antes das 17:00 do dia 20/10.">
+									17:00 do dia 20/10
+								</abbr></td><td role="gridcell" class="ui-column-p-1">
+								14
+							</td><td role="gridcell" class="ui-column-p-2">
+								07:00
+							</td><td role="gridcell" class="ui-column-p-3">
+								07:00
+							</td></tr><tr data-ri="2" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" class="">
+								Janta, R$ 0.0, Moradia Estudantil
+							</td><td role="gridcell" class="ui-column-p-1">
+								<abbr title="Eu devo agendar o/a Janta para hoje, antes das 12:30 do dia 21/10.">
+									12:30 do dia 21/10
+								</abbr></td><td role="gridcell" class="ui-column-p-1">
+								6
+							</td><td role="gridcell" class="ui-column-p-2">
+								18:30
+							</td><td role="gridcell" class="ui-column-p-3">
+								18:30
+							</td></tr></tbody></table></div></div>
+						<p>
+							* A hora limite é usada para bloquear a alteração de agendamentos X horas antes do horário de início da refeição agendada, a coluna "Ex. bloqueio..." indica o dia/horário   
+						</p></div></div>
+				</div><div id="frmMain:j_idt59" class="ui-outputpanel ui-widget"><div id="frmMain:j_idt60" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_frmMain_j_idt60"><div id="frmMain:j_idt60_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Agendamento de refeições</span></div><div id="frmMain:j_idt60_content" class="ui-panel-content ui-widget-content"><span id="frmMain:messages"></span><div id="frmMain:schedule" style="max-width: 1000px;" class="agendaSchedule"><input id="frmMain:schedule_view" name="frmMain:schedule_view" type="hidden" autocomplete="off" aria-hidden="true" value="dayGridMonth" /></div></div></div></div></div><div id="frmMain:dlgAgendamento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="max-width: 500px"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="frmMain:dlgAgendamento_title" class="ui-dialog-title">Detalhes</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Fechar"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="frmMain:dlgAgendamento_content">
+				<div><div id="frmMain:eventDetails" class="ui-outputpanel ui-widget">
+			        	<div class="ui-fluid p-formgrid p-grid">
+							<div class="p-field p-col-12 p-md-12"><label id="frmMain:j_idt63" class="ui-outputlabel ui-widget" for="frmMain:tipoRefeicao_focus">Tipo da refeição:<span class="ui-outputlabel-rfi">*</span></label><div id="frmMain:tipoRefeicao" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all " aria-owns="frmMain:tipoRefeicao_panel" role="combobox" aria-haspopup="listbox" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="frmMain:tipoRefeicao_focus" name="frmMain:tipoRefeicao_focus" type="text" autocomplete="off" aria-required="true" aria-labelledby="frmMain:j_idt63" /></div><div class="ui-helper-hidden-accessible"><select id="frmMain:tipoRefeicao_input" name="frmMain:tipoRefeicao_input" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Tipo da refeição"><option selected="selected" data-escape="true">&amp;nbsp;</option><option value="1772183812@0756ada2-3c47-4bab-8f49-c2c60e0e7bc2" data-escape="true">Almoço, R$ 0.0, Integrado</option><option value="1772183812@5a1c89e7-2b4d-468f-8311-b71fe615f6be" data-escape="true">Café da manhã, R$ 0.0, Moradia Estudantil</option><option value="1772183812@e2650e86-c0ae-40c3-81f2-22db101e3240" data-escape="true">Janta, R$ 0.0, Moradia Estudantil</option></select></div><label id="frmMain:tipoRefeicao_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Tipo da refeição&nbsp;</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div><div id="frmMain:tipoRefeicao_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"></div></div></div>
+			            	</div>
+			            	<div class="p-field p-col-12 p-md-12"><label id="frmMain:j_idt67" class="ui-outputlabel ui-widget" for="frmMain:from_input">Data do Agendamento:<span class="ui-outputlabel-rfi">*</span></label><span id="frmMain:from" class="p-datepicker ui-calendar"><input id="frmMain:from_input" name="frmMain:from_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all " aria-required="true" aria-labelledby="frmMain:j_idt67" /></span>
+			            	</div>
+
+							<div class="p-field p-col-12 p-md-12">
+				            </div>
+				        </div></div><div id="frmMain:j_idt73" class="ui-outputpanel ui-widget ui-messages ui-widget">
+						<div class="ui-messages-error ui-corner-all">
+							<span class="ui-messages-error-icon"></span>
+							<ul>
+								<li role="alert" aria-atomic="true">
+									<span class="ui-messages-error-summary">
+										Agendamento lançado pelo sistema devido ao não agendamento do usuário.
+									</span>
+								</li>
+							</ul>
+						</div></div>
+		        </div><div id="frmMain:j_idt77" class="ui-confirm-popup ui-widget ui-corner-all ui-shadow ui-hidden-container"><div class="ui-confirm-popup-content ui-widget-content" id="frmMain:j_idt77_content"><i class="ui-confirm-popup-icon"></i><span class="ui-confirm-popup-message"></span></div><div class="ui-confirm-popup-footer ui-widget-content ui-helper-clearfix"><button id="frmMain:j_idt78" name="frmMain:j_idt78" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-confirm-popup-no ui-button-flat" type="button"><span class="ui-button-text ui-c">Não</span></button><button id="frmMain:j_idt79" name="frmMain:j_idt79" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-confirm-popup-yes" type="button"><span class="ui-button-text ui-c">Sim</span></button></div></div></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="6731932973012955931:-5328125881940894329" autocomplete="off" />
+</form>
+		</div>
+	</main>
+	
+	<footer>
+	</footer>
+ 	<div id="j_idt82" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt82_title" class="ui-dialog-title">Sessão Expirada!</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Fechar"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="j_idt82_content">
+ 		<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="window.location.href = window.location.href.replace('#','')" type="button" role="button" aria-disabled="false">
+ 			<span class="ui-button-icon-left ui-icon ui-c pi pi-refresh">
+	 		</span><span class="ui-button-text ui-c">Recarregar</span>
+ 		</button></div></div><div id="j_idt84"></div><div id="j_idt85" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt85_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt85_content">
+    	<i class="pi pi-spinner pi-spin" style="font-size:3rem"></i></div></div><script type="text/javascript" src="/sifw/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/moment/moment.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/moment/moment-timezone-with-data.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/schedule/schedule.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/inputmask/inputmask.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/datepicker/datepicker.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script type="text/javascript" src="/sifw/javax.faces.resource/locales/locale-pt.js.xhtml?ln=primefaces&amp;v=11.0.0"></script><script id="513c37c1-999d-46c8-a014-69de52fc2258" type="text/javascript">var pf=window.PrimeFaces;if(pf){pf.settings.locale='pt_BR';pf.settings.viewId='/app/agendamento.xhtml';pf.settings.contextPath='/sifw';pf.settings.cookiesSecure=false;pf.settings.partialSubmit=true;pf.settings.projectStage='Development';};
+pf.cw("TieredMenu","widget_frmHeader_j_idt20",{id:"frmHeader:j_idt20",autoDisplay:true,overlay:true,my:"left top",at:"bottom",trigger:"frmHeader:dynaButton",triggerEvent:"click"});
+pf.cw("PanelMenu","widget_j_idt30_j_idt31",{id:"j_idt30:j_idt31",stateful:true,multiple:true});
+
+		    function handleLoginRequest(xhr, status, args) {
+		        if(!args.validationFailed){
+		        	PF('eventDialog').hide();
+		        	PF('myschedule').update();
+		        	return true;
+		        }
+		        return false;
+		    }
+		;
+pf.cw("Growl","widget_frmMain_j_idt41",{id:"frmMain:j_idt41",sticky:false,life:6000,escape:true,keepAlive:false,msgs:[]});
+pf.cw("DataTable","widget_frmMain_j_idt46",{id:"frmMain:j_idt46",touchable:false,groupColumnIndexes:[],disableContextMenuIfEmpty:false});
+pf.cw("Panel","widget_frmMain_j_idt45",{id:"frmMain:j_idt45"});
+pf.cw("Growl","widget_frmMain_messages",{id:"frmMain:messages",sticky:false,life:6000,escape:true,keepAlive:false,msgs:[]});
+pf.cw("Schedule","myschedule",{id:"frmMain:schedule",locale:"pt_BR",options:{locale:"pt-br",initialView:"dayGridMonth",lazyFetching:false,headerToolbar:{start:'prev,next',center:"title",end:"dayGridMonth"},height:"auto",eventStartEditable:false,eventDurationEditable:true,nextDayThreshold:"00:00:00",displayEventEnd:false},behaviors:{dateSelect:function(ext,event) {pf.ab({s:"frmMain:schedule",e:"dateSelect",f:"frmMain",p:"frmMain:schedule",u:"frmMain:dlgAgendamento frmMain:messages"},ext);},eventSelect:function(ext,event) {pf.ab({s:"frmMain:schedule",e:"eventSelect",f:"frmMain",p:"frmMain:schedule",u:"frmMain:dlgAgendamento"},ext);}}});
+pf.cw("Panel","widget_frmMain_j_idt60",{id:"frmMain:j_idt60"});
+pf.cw("SelectOneMenu","widget_frmMain_tipoRefeicao",{id:"frmMain:tipoRefeicao",appendTo:"@(body)",label:"Tipo da refeição",touchable:false,renderPanelContentOnClient:true});
+pf.cw("DatePicker","widget_frmMain_from",{id:"frmMain:from",inline:false,userLocale:"pt_BR",dateFormat:"dd\/mm\/yy",selectionMode:"single",showOnFocus:true,appendTo:"@(body)",fractionSeparator:",",timeInput:false,touchable:false});
+pf.cw("CommandButton","widget_frmMain_j_idt78",{id:"frmMain:j_idt78"});
+pf.cw("CommandButton","widget_frmMain_j_idt79",{id:"frmMain:j_idt79"});
+pf.cw("ConfirmPopup","widget_frmMain_j_idt77",{id:"frmMain:j_idt77",global:true});
+pf.cw("Dialog","eventDialog",{id:"frmMain:dlgAgendamento",position:"center"});
+
+
+ 		var agora = Date.now();
+ 		var session = 15;
+
+		function showMenuNavEsquesdo(){
+			if(document.body.classList.length == 0){
+				document.body.classList.add('show-menu')
+				return;
+			}
+
+			if(document.body.classList.contains('oculta-menu')){
+				document.body.classList.remove('oculta-menu')
+				document.body.classList.add('show-menu')
+				return;
+			}
+			
+			if(document.body.classList.contains('show-menu')){
+				document.body.classList.remove('show-menu')
+				document.body.classList.add('oculta-menu')
+				return;
+			}
+		}
+
+		$(document).on('pfAjaxSuccess', function(xhr, settings) {
+			agora = Date.now();
+		    console.log('pfAjaxSuccess!');
+		});
+
+		var originalHandler = PrimeFaces.ajax.Request.handle;
+		
+		PrimeFaces.ajax.Request.handle = function(cfg,partial){
+			let diferenca = (Date.now() - agora)
+			var min = Math.round(((diferenca % 86400000) % 3600000) / 60000);
+			//console.log(diferenca + " - " +min);
+			if(min >= session){
+				console.log(diferenca + " - " +min);
+				PrimeFaces.ajax.Queue.abortAll();
+				PF("dlgSession").show();
+				return ;
+			}else{
+				return originalHandler(cfg,partial);
+			}
+		}
+
+	    PrimeFaces.env.touch = false;
+
+	    //<![CDATA[
+	    function start() {
+	        PF('statusDialog').show();
+	    }
+
+	    function stop() {
+	        PF('statusDialog').hide();
+	    }
+	    //]]>
+	    
+ 	;
+pf.cw("Dialog","dlgSession",{id:"j_idt82",modal:true,width:"350",minHeight:40,showEffect:"fade"});
+pf.cw("AjaxStatus","widget_j_idt84",{id:"j_idt84",delay:0,start:function(){PF('statusDialog').show()},error:function(){console.log('ERRO')},success:function(){PF('statusDialog').hide()}});
+pf.cw("Dialog","statusDialog",{id:"j_idt85",draggable:false,resizable:false});document.getElementById('513c37c1-999d-46c8-a014-69de52fc2258').remove();</script></body>
+</html>
